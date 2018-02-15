@@ -1,3 +1,6 @@
+# docker-flume-logger
+
+As simple as possible -> consume avro and log it with flume.
 
 ## Build Instructions
 
@@ -19,10 +22,9 @@
       --name flume2 \
       flume
 
-      docker run -d \
-        -e FLUME_AGENT_NAME=a1 \
-        -e FLUME_CONF_FILE=/var/tmp/flume.conf \
-        -p 44443:41414 \
-        --name flume3 \
-        flume
-# docker-flume-logger
+    docker run -d \
+      -e FLUME_AGENT_NAME=a1 \
+      -e FLUME_CONF_FILE=/var/tmp/flume.conf \
+      -p 44443:41414 \
+      --name flume3 \
+      flume
